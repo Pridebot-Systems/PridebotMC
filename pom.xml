@@ -6,7 +6,7 @@
 
     <groupId>dev.sdriver1</groupId>
     <artifactId>pridebot</artifactId>
-    <version>0.0.1-Alpha</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>pridebot</name>

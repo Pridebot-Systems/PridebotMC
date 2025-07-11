@@ -26,7 +26,7 @@ gradients.
 
 ## 🛠️ Installation
 
-1. Download the latest `Pridebot.jar` from the [Releases](https://github.com/your-repo/PridebotMC/releases).
+1. Download the latest `Pridebot.jar` from the [Releases](https://github.com/Pridebot-Systems/PridebotMC/releases).
 2. Place `Pridebot.jar` into your server's `plugins/` folder.
 3. Start or reload your Paper 1.21 server.
 

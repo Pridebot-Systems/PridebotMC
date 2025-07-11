@@ -2,16 +2,15 @@ package dev.sdriver1.pridebot;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Pridebot extends JavaPlugin {
-
+public class Pridebot extends JavaPlugin {
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        // Gaydar
+        getCommand("gaydar").setExecutor(new GaydarCommand(this));
+        getCommand("gaydar").setTabCompleter(new PlayerTabCompleter());
 
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+        // Transdar
+        getCommand("transdar").setExecutor(new TransdarCommand(this));
+        getCommand("transdar").setTabCompleter(new PlayerTabCompleter());
     }
 }

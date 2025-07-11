@@ -1,4 +1,18 @@
 name: Pridebot
-version: '1.0-SNAPSHOT'
+version: '0.0.1-Alpha'
 main: dev.sdriver1.pridebot.Pridebot
 api-version: '1.21'
+commands:
+  gaydar:
+    description: How gay are you (or another player)?
+    usage: /gaydar [player]
+  transdar:
+    description: How trans are you (or another player)?
+    usage: /transdar [player]
+permissions:
+  pridebot.gaydar:
+    description: Allows using /gaydar
+    default: true
+  pridebot.transdar:
+    description: Allows using /transdar
+    default: true

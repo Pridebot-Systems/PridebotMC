@@ -1,0 +1,4 @@
+name: Pridebot
+version: '1.0-SNAPSHOT'
+main: dev.sdriver1.pridebot.Pridebot
+api-version: '1.21'

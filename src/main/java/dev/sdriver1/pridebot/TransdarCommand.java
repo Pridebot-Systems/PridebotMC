@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class TransdarCommand implements CommandExecutor {
     private final Pridebot plugin;
-    private static final String PREFIX_TAG = "<#ff00ae><bold>[Pridebot]:</bold></#ff00ae> ";
+    private static final String PREFIX_TAG = "<#ff00ae><bold>Pridebot:</bold></#ff00ae> ";
     private final MiniMessage mm = MiniMessage.miniMessage();
 
     public TransdarCommand(Pridebot plugin) {
@@ -45,7 +45,7 @@ public class TransdarCommand implements CommandExecutor {
 
         String body = "<yellow>" + target.getName() + "</yellow> is "
                 + "<#ff00ae><bold>" + meter + "%</bold></#ff00ae> trans!";
-        Component reply = mm.deserialize(PREFIX_TAG + body);
+        Component reply = mm.deserialize(PREFIX_TAG + "\n" + body);
 
         sender.sendMessage(reply);
         return true;

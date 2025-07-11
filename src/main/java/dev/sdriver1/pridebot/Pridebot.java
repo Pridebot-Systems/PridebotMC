@@ -12,5 +12,13 @@ public class Pridebot extends JavaPlugin {
         // Transdar
         getCommand("transdar").setExecutor(new TransdarCommand(this));
         getCommand("transdar").setTabCompleter(new PlayerTabCompleter());
+
+        // /gender
+        getCommand("gender").setExecutor(new GenderCommand());
+        getCommand("gender").setTabCompleter(new GenderTabComplete());
+
+        // /sexuality
+        getCommand("sexuality").setExecutor(new SexualityCommand());
+        getCommand("sexuality").setTabCompleter(new SexualityTabComplete());
     }
 }

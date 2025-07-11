@@ -9,10 +9,24 @@ commands:
   transdar:
     description: How trans are you (or another player)?
     usage: /transdar [player]
+  gender:
+    description: Show info & flag for a given gender identity
+    usage: /gender <transgender|nonbinary|agender|genderqueer>
+    permission: pridebot.gender
+  sexuality:
+    description: Show info & flag for a given sexuality
+    usage: /sexuality <gay|lesbian|bisexual|pansexual|asexual>
+    permission: pridebot.sexuality
 permissions:
   pridebot.gaydar:
     description: Allows using /gaydar
     default: true
   pridebot.transdar:
     description: Allows using /transdar
+    default: true
+  pridebot.gender:
+    description: Allows using /gender
+    default: true
+  pridebot.sexuality:
+    description: Allows using /sexuality
     default: true

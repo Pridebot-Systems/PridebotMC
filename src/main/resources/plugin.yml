@@ -1,5 +1,5 @@
-name: Pridebot
-version: '1.0.0'
+name: PridebotMC
+version: '1.1.0'
 main: dev.sdriver1.pridebot.Pridebot
 api-version: '1.21'
 

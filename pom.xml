@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.sdriver1</groupId>
-    <artifactId>pridebot</artifactId>
-    <version>1.0.0</version>
+    <artifactId>pridebotmc</artifactId>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>pridebot</name>

@@ -16,56 +16,61 @@ public class GenderCommand implements CommandExecutor {
 
     public static record Info(String display, String definition, List<String> stripes, String prideFlag) {
     }
-    
 
     public static final Map<String, Info> GENDERS = Map.ofEntries(
             Map.entry("transgender", new Info(
                     "Transgender",
-                    "People whose gender identity differs from the sex assigned at birth.",
+                    "An umbrella term for people whose gender identity differs from the sex they were assigned at birth. "
+                            + "Trans people may socially, medically, or legally transition to live in alignment with their true gender.",
                     List.of("#5BCEFA", "#F5A9B8", "#FFFFFF", "#F5A9B8", "#5BCEFA"),
                     "trans"
             )),
             Map.entry("nonbinary", new Info(
                     "Nonbinary",
-                    "People whose gender identity isn’t exclusively male or female.",
+                    "A spectrum of gender identities outside the strict categories of male and female. "
+                            + "Nonbinary people may identify as both, neither, or a fluctuating mix of genders.",
                     List.of("#FFF430", "#FFFFFF", "#9C59D1", "#000000"),
                     "nb"
             )),
             Map.entry("agender", new Info(
                     "Agender",
-                    "People who identify as having no gender.",
+                    "People who identify as having no gender or a neutral gender. "
+                            + "Often describes a lack of identification with any gender category.",
                     List.of("#000000", "#B6B6B6", "#FFFFFF", "#B6B6B6", "#000000"),
                     "agender"
             )),
             Map.entry("genderqueer", new Info(
                     "Genderqueer",
-                    "People whose gender identity falls outside of or between the male/female binary.",
+                    "An umbrella term for gender identities that are outside or between the binary. "
+                            + "Includes identities like genderfluid, bigender, and others that challenge strict male/female norms.",
                     List.of("#B57EDC", "#FFFFFF", "#4A8123"),
                     "genderqueer"
             )),
             Map.entry("genderfluid", new Info(
                     "Genderfluid",
-                    "People whose gender identity shifts over time.",
+                    "People whose gender identity changes over time or in different contexts, "
+                            + "shifting between two or more genders or expressions of gender.",
                     List.of("#9BD8E8", "#FBCBDE", "#FFFFFF", "#C18FD6", "#333333"),
                     "genderfluid"
             )),
             Map.entry("bigender", new Info(
                     "Bigender",
-                    "People who identify with two genders.",
+                    "People who identify as two distinct genders, either simultaneously or varying between them",
                     List.of("#D73D9A", "#C58E9F", "#FFFFFF", "#1EB2A6", "#2D75DA"),
                     "bigender"
             )),
             Map.entry("demigender", new Info(
                     "Demigender",
-                    "People who partially identify with a gender.",
+                    "People who feel a partial connection to a particular gender (e.g. demiboy, demigirl), "
+                            + "experiencing that gender only to some extent.",
                     List.of("#808080", "#FFFFFF", "#9100F4", "#FFFFFF", "#808080"),
                     "demigender"
             )),
             Map.entry("intersex", new Info(
                     "Intersex",
-                    "People born with sex characteristics that don’t fit typical binary definitions of male or female.",
-                    // a solid‐yellow flag, so we repeat one color
-                    List.of("#FCE83E", "#FCE83E", "#FCE83E", "#FCE83E", "#FCE83E"),
+                    "People born with physical sex characteristics (chromosomes, gonads, hormones, or anatomy) "
+                            + "that do not fit typical binary notions of male or female. Intersex is about biology, not identity.",
+                    List.of("#FCE83E", "#FCE83E", "#760089", "#FCE83E", "#FCE83E"),
                     "intersex"
             ))
     );

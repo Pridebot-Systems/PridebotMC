@@ -20,51 +20,52 @@ public class SexualityCommand implements CommandExecutor {
     public static final Map<String, Info> SEXUALITIES = Map.ofEntries(
             Map.entry("gay", new Info(
                     "Gay",
-                    "People attracted to members of the same gender.",
-                    List.of("#E70000", "#FF8C00", "#FFEF00", "#00811F", "#0044FF", "#760089"),
+                    "People who experience romantic or sexual attraction primarily to members of the same gender.",
+                    List.of("#E70000","#FF8C00","#FFEF00","#00811F","#0044FF","#760089"),
                     "gay"
             )),
             Map.entry("lesbian", new Info(
                     "Lesbian",
-                    "Women attracted to women.",
-                    List.of("#D52D00", "#FF9A56", "#FFFFFF", "#D362A4", "#A30262"),
+                    "Women and girls who experience romantic or sexual attraction to other women and girls.",
+                    List.of("#D52D00","#FF9A56","#FFFFFF","#D362A4","#A30262"),
                     "lesbian"
             )),
             Map.entry("bisexual", new Info(
                     "Bisexual",
-                    "People attracted to more than one gender.",
-                    List.of("#D60270", "#9B4F96", "#0038A8"),
+                    "People who experience romantic or sexual attraction to more than one gender, "
+                            + "not necessarily in equal measure or at the same time.",
+                    List.of("#D60270","#9B4F96","#0038A8"),
                     "bi"
             )),
             Map.entry("pansexual", new Info(
                     "Pansexual",
-                    "People attracted regardless of gender.",
-                    List.of("#FF218C", "#FFD800", "#21B1FF"),
+                    "People whose attraction is not limited by gender; can be attracted to people regardless of gender identity.",
+                    List.of("#FF218C","#FFD800","#21B1FF"),
                     "pan"
             )),
             Map.entry("asexual", new Info(
                     "Asexual",
-                    "People who experience little or no sexual attraction.",
-                    List.of("#000000", "#A4A4A4", "#FFFFFF", "#810081"),
+                    "People who experience little to no sexual attraction to any gender, though they may have romantic attraction.",
+                    List.of("#000000","#A4A4A4","#FFFFFF","#810081"),
                     "ace"
             )),
             Map.entry("demisexual", new Info(
                     "Demisexual",
-                    "People who experience attraction only after forming a deep emotional bond.",
-                    List.of("#000000", "#AAAAAA", "#FFFFFF", "#800080"),
+                    "People who experience sexual attraction only after forming a strong emotional or romantic bond.",
+                    List.of("#000000","#AAAAAA","#FFFFFF","#800080"),
                     "demisexual"
             )),
             Map.entry("queer", new Info(
                     "Queer",
-                    "An umbrella term for sexual and gender minorities outside the heterosexual/cisgender norms.",
-                    // rainbow stripes for the queer flag
-                    List.of("#E70000", "#FF8C00", "#FFEF00", "#00811F", "#0044FF", "#760089"),
+                    "An umbrella term reclaimed by many as a positive, inclusive label for sexual and gender minorities "
+                            + "outside of heterosexual and cisgender norms.",
+                    List.of("#E70000","#FF8C00","#FFEF00","#00811F","#0044FF","#760089"),
                     "queer"
             )),
             Map.entry("aromantic", new Info(
                     "Aromantic",
-                    "People who experience little or no romantic attraction.",
-                    List.of("#3DAE48", "#A9DFBF", "#FFFFFF", "#B2B3B9", "#1A1A1D"),
+                    "People who experience little to no romantic attraction to others, distinct from sexual orientation.",
+                    List.of("#3DAE48","#A9DFBF","#FFFFFF","#B2B3B9","#1A1A1D"),
                     "aro"
             ))
     );

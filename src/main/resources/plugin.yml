@@ -2,6 +2,7 @@ name: Pridebot
 version: '0.0.1-Alpha'
 main: dev.sdriver1.pridebot.Pridebot
 api-version: '1.21'
+
 commands:
   gaydar:
     description: How gay are you (or another player)?
@@ -11,12 +12,16 @@ commands:
     usage: /transdar [player]
   gender:
     description: Show info & flag for a given gender identity
-    usage: /gender <transgender|nonbinary|agender|genderqueer>
+    usage: /gender <gender>
     permission: pridebot.gender
   sexuality:
     description: Show info & flag for a given sexuality
-    usage: /sexuality <gay|lesbian|bisexual|pansexual|asexual>
+    usage: /sexuality <sexuality>
     permission: pridebot.sexuality
+  list:
+    description: List supported genders or sexualities (or all)
+    usage: /list <genders|sexualities|all>
+
 permissions:
   pridebot.gaydar:
     description: Allows using /gaydar
@@ -29,4 +34,7 @@ permissions:
     default: true
   pridebot.sexuality:
     description: Allows using /sexuality
+    default: true
+  pridebot.list:
+    description: Allows using /list
     default: true

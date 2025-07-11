@@ -20,5 +20,10 @@ public class Pridebot extends JavaPlugin {
         // /sexuality
         getCommand("sexuality").setExecutor(new SexualityCommand());
         getCommand("sexuality").setTabCompleter(new SexualityTabComplete());
+
+        // /list
+        getCommand("list").setExecutor(new ListCommand());
+        getCommand("list").setTabCompleter(new ListTabComplete());
+
     }
 }

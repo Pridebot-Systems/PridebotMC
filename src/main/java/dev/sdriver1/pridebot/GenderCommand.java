@@ -14,13 +14,14 @@ public class GenderCommand implements CommandExecutor {
     private static final String PREFIX = "<#ff00ae><bold>Pridebot:</bold></#ff00ae> ";
     private final MiniMessage mm = MiniMessage.miniMessage();
 
-    private record Info(String display, String definition, List<String> stripes, String prideFlag) {
+    public static record Info(String display, String definition, List<String> stripes, String prideFlag) {
     }
+    
 
-    static final Map<String, Info> GENDERS = Map.ofEntries(
+    public static final Map<String, Info> GENDERS = Map.ofEntries(
             Map.entry("transgender", new Info(
                     "Transgender",
-                    "People whose gender identity differs from the sex they were assigned at birth.",
+                    "People whose gender identity differs from the sex assigned at birth.",
                     List.of("#5BCEFA", "#F5A9B8", "#FFFFFF", "#F5A9B8", "#5BCEFA"),
                     "trans"
             )),
@@ -41,6 +42,31 @@ public class GenderCommand implements CommandExecutor {
                     "People whose gender identity falls outside of or between the male/female binary.",
                     List.of("#B57EDC", "#FFFFFF", "#4A8123"),
                     "genderqueer"
+            )),
+            Map.entry("genderfluid", new Info(
+                    "Genderfluid",
+                    "People whose gender identity shifts over time.",
+                    List.of("#9BD8E8", "#FBCBDE", "#FFFFFF", "#C18FD6", "#333333"),
+                    "genderfluid"
+            )),
+            Map.entry("bigender", new Info(
+                    "Bigender",
+                    "People who identify with two genders.",
+                    List.of("#D73D9A", "#C58E9F", "#FFFFFF", "#1EB2A6", "#2D75DA"),
+                    "bigender"
+            )),
+            Map.entry("demigender", new Info(
+                    "Demigender",
+                    "People who partially identify with a gender.",
+                    List.of("#808080", "#FFFFFF", "#9100F4", "#FFFFFF", "#808080"),
+                    "demigender"
+            )),
+            Map.entry("intersex", new Info(
+                    "Intersex",
+                    "People born with sex characteristics that don’t fit typical binary definitions of male or female.",
+                    // a solid‐yellow flag, so we repeat one color
+                    List.of("#FCE83E", "#FCE83E", "#FCE83E", "#FCE83E", "#FCE83E"),
+                    "intersex"
             ))
     );
 
@@ -64,7 +90,6 @@ public class GenderCommand implements CommandExecutor {
             return true;
         }
 
-        // build the pride-wrapped display name (or fallback to bold)
         String displayTag = (info.prideFlag() != null)
                 ? "<pride:" + info.prideFlag() + "><bold>" + info.display() + "</bold></pride>"
                 : "<bold>" + info.display() + "</bold>";

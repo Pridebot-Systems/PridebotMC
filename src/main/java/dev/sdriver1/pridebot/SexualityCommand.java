@@ -14,10 +14,10 @@ public class SexualityCommand implements CommandExecutor {
     private static final String PREFIX = "<#ff00ae><bold>Pridebot:</bold></#ff00ae> ";
     private final MiniMessage mm = MiniMessage.miniMessage();
 
-    private record Info(String display, String definition, List<String> stripes, String prideFlag) {
+    public static record Info(String display, String definition, List<String> stripes, String prideFlag) {
     }
 
-    static final Map<String, Info> SEXUALITIES = Map.ofEntries(
+    public static final Map<String, Info> SEXUALITIES = Map.ofEntries(
             Map.entry("gay", new Info(
                     "Gay",
                     "People attracted to members of the same gender.",
@@ -38,7 +38,7 @@ public class SexualityCommand implements CommandExecutor {
             )),
             Map.entry("pansexual", new Info(
                     "Pansexual",
-                    "People attracted to others regardless of gender.",
+                    "People attracted regardless of gender.",
                     List.of("#FF218C", "#FFD800", "#21B1FF"),
                     "pan"
             )),
@@ -47,6 +47,25 @@ public class SexualityCommand implements CommandExecutor {
                     "People who experience little or no sexual attraction.",
                     List.of("#000000", "#A4A4A4", "#FFFFFF", "#810081"),
                     "ace"
+            )),
+            Map.entry("demisexual", new Info(
+                    "Demisexual",
+                    "People who experience attraction only after forming a deep emotional bond.",
+                    List.of("#000000", "#AAAAAA", "#FFFFFF", "#800080"),
+                    "demisexual"
+            )),
+            Map.entry("queer", new Info(
+                    "Queer",
+                    "An umbrella term for sexual and gender minorities outside the heterosexual/cisgender norms.",
+                    // rainbow stripes for the queer flag
+                    List.of("#E70000", "#FF8C00", "#FFEF00", "#00811F", "#0044FF", "#760089"),
+                    "queer"
+            )),
+            Map.entry("aromantic", new Info(
+                    "Aromantic",
+                    "People who experience little or no romantic attraction.",
+                    List.of("#3DAE48", "#A9DFBF", "#FFFFFF", "#B2B3B9", "#1A1A1D"),
+                    "aro"
             ))
     );
 
